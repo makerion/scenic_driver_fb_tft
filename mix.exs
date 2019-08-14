@@ -5,8 +5,8 @@ defmodule ScenicDriverInky.MixProject do
 
   def project do
     [
-      app: :scenic_driver_inky,
-      version: "1.0.0",
+      app: :scenic_driver_fb_tft,
+      version: "0.11.0",
       elixir: "~> 1.11",
       description: description(),
       package: package(),
@@ -28,22 +28,21 @@ defmodule ScenicDriverInky.MixProject do
       {:scenic, "~> 0.11.0-beta.0"},
       {:scenic_driver_local, "~> 0.11.0-beta.0", targets: @pi_targets},
       {:rpi_fb_capture, "~> 0.1", targets: @pi_targets},
-      {:inky, "~> 1.0.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
   defp description do
-    "Pimoroni Inky driver for Scenic"
+    "Framebuffer TFT driver for Scenic"
   end
 
   defp package do
     %{
-      name: "scenic_driver_inky",
+      name: "scenic_driver_fb_tft",
       description:
-        "A library to provide a Scenic framework driver implementation for the Inky series of eInk displays from Pimoroni. Built on top of the pappersverk/inky library. All in Elixir.",
+        "A library to provide a Scenic framework driver implementation for generic TFT devices over SPI.",
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => "https://github.com/lawik/scenic_driver_inky"}
+      links: %{"GitHub" => "https://github.com/makerion/scenic_driver_fb_tft"}
     }
   end
 end
