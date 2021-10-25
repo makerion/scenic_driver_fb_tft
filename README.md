@@ -4,10 +4,12 @@ A library to provide a Scenic framework driver implementation for SPI serial con
 
 This driver only runs on RPi devices as far as we know as it is based on the scenic rpi driver generating a framebuffer we can use.
 
+Many thanks to the work on the Inky Scenic Driver folks (https://github.com/pappersverk/scenic_driver_inky) who worked through the framebuffer capturing from rpi, and Frank Hunleth for his tireless work (https://github.com/fhunleth/rpi_fb_capture) (as always)
+
 ## Installation
 
 The package can be installed
-by adding `scenic_driver_inky` to your list of dependencies in `mix.exs`:
+by adding `scenic_driver_fb_tft` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
